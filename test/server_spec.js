@@ -23,7 +23,7 @@ var clearDb = function (done) {
 }
 
 describe('The server module', function () {
-  this.timeout(8000)
+  this.timeout(16000)
 
   after(function (done) {
     mongoose.connection.close(done)
@@ -79,7 +79,7 @@ describe('The server module', function () {
       server.init.bind(null, 4444),
       clearDb,
       doclet.save.bind(doclet),
-      doclet2.save.bind(doclet),
+      doclet2.save.bind(doclet2),
       user.save.bind(user),
       repo.save.bind(repo)
     ], done)

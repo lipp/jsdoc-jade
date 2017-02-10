@@ -14,6 +14,8 @@ var loadFixture = function (name) {
 }
 
 describe('tree', function () {
+  this.timeout(10000)
+
   describe('amd', function () {
     var modules
 
